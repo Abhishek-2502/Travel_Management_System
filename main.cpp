@@ -365,7 +365,7 @@ public:
 
 float Booking::hotelCost;
 
-class Chargers : public Customer, public Booking, public Cabs // Multiple Inheritance of some other classes to Chargers
+class charges : public Customer, public Booking, public Cabs // Multiple Inheritance of some other classes to charges
 {
 
 public:
@@ -440,7 +440,7 @@ void menu() // menu function contain main menu
     Customer a2;
     Cabs a3;
     Booking a4;
-    Chargers a5;
+    charges a5;
 
     if (mainChoice == 1)
     {
