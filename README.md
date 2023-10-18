@@ -15,6 +15,7 @@ inefficiencies, errors in booking calculations, and inadequate customer service.
 
 <h3>EXPLANATION</h3>
 The provided code is implemented in C++ and consists of several classes:
+
 - `ManageMenu`: Manages the main menu display and administrative access.
 - `Customer`: Handles customer details, including capturing and displaying stored data.
 - `Cabs`: Manages cab bookings and cost calculations.
@@ -30,6 +31,7 @@ The system displays outputs in the console:
 - Confirmation messages upon successful data entry.
 - Calculated cab costs based on user input.
 - Detailed receipts that outline charges for services availed.
+
 The system uses text files ("old-customers.txt" and "receipt.txt") to store and retrieve
 customer details and transaction receipts.
 
