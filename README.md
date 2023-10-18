@@ -32,28 +32,41 @@ The system displays outputs in the console:
 - Calculated cab costs based on user input.
 - Detailed receipts that outline charges for services availed.
 
-The system uses text files ("old-customers.txt" and "receipt.txt") to store and retrieve
-customer details and transaction receipts.
-
+<p>The system uses text files ("old-customers.txt" and "receipt.txt") to store and retrieve
+customer details and transaction receipts.</p>
 1. ManageMenu Class
-This class initializes the application, setting the aesthetics of the console, capturing user
+<p>This class initializes the application, setting the aesthetics of the console, capturing user
 names, and navigating to the main menu. The use of `system("color 0A")` sets the
-console text to light green, enhancing user experience.
+console text to light green, enhancing user experience.</p>
 2. Customer Class
-This class focuses on managing customer information. Through the `getDetails()`
+<p>This class focuses on managing customer information. Through the `getDetails()`
 function, it captures and writes user details to the `old-customers.txt` file. The
-`showDetails()` function reads and displays this stored data.
+`showDetails()` function reads and displays this stored data.</p>
 3. Cabs Class
-Responsible for cab bookings, this class offers users choices between standard and luxury
-cabs. It then calculates the fare based on the selected cab type and desired travel distance.
+<p>Responsible for cab bookings, this class offers users choices between standard and luxury
+cabs. It then calculates the fare based on the selected cab type and desired travel distance.</p>
 4. Booking Class
-The Booking class, as the name suggests, manages hotel reservations. Users can select a
+<p>The Booking class, as the name suggests, manages hotel reservations. Users can select a
 hotel and a package, with the system then providing detailed information and calculating
-costs based on selections.
+costs based on selections.</p>
 5. Charges Class
-An amalgamation of the Customer, Booking, and Cabs classes, this class oversees the
-billing process, combining all charges and generating a detailed bill.
+<p>An amalgamation of the Customer, Booking, and Cabs classes, this class oversees the
+billing process, combining all charges and generating a detailed bill.</p>
 6. Main Menu Function (`menu()`)
-Representing the program's primary interaction point, this function directs users to
+<p>Representing the program's primary interaction point, this function directs users to
 various features, such as customer management, cab reservations, hotel bookings, and
-billing.
+billing.</p>
+
+<h3>CLASS DIAGRAM</h3>
+<img src="" alt="error">
+
+<h3>CODE HIGHLIGHTS</h3>
+
+1. File Operations: Utilizing C++'s `ofstream` and `ifstream`, the system can persistently
+store and retrieve data, ensuring longevity and access to customer records and receipts.
+
+2. User Interface: Through a console-based interaction model, users are presented with
+clear choices and prompts, facilitating easy navigation and operation.
+
+3. Console Manipulation: Commands like `system("color")` and `system("CLS")`
+enhance the visual aesthetics of the application and ensure a clean interface.
