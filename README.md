@@ -58,7 +58,7 @@ various features, such as customer management, cab reservations, hotel bookings,
 billing.</p>
 
 <h3>CLASS DIAGRAM</h3>
-![Class Diagram](https://github.com/Abhishek-2502/Travel_Mangement/assets/145414094/2ff5f926-3e03-437c-9ff7-6b3829ac3f84)
+<img src="https://github.com/Abhishek-2502/Travel_Mangement/assets/145414094/2ff5f926-3e03-437c-9ff7-6b3829ac3f84" alt="error">
 
 <h3>CODE HIGHLIGHTS</h3>
 
