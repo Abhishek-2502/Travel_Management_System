@@ -27,6 +27,7 @@ The system prompts users for various inputs depending on the function:
 - Customer details such as ID, name, age, mobile number, address, and gender.
 - Cab preferences, including type of cab and distance to be traveled.
 - Hotel booking preferences, including hotel selection and package choice.
+  
 The system displays outputs in the console:
 - Confirmation messages upon successful data entry.
 - Calculated cab costs based on user input.
