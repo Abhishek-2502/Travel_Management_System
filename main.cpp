@@ -26,15 +26,14 @@ public:
 
 class Customer
 {
-    
-public:
     // Encapsulation (Making Data Member as private)
     string name, gender, address;
-    int age, mobileNo;
-    static int cusID;
-    char all[999];
-    
+    int age;
+    long long int mobileNo;
 
+protected:
+    char all[999];
+    static int cusID;
     void getDetails()
     {
         ofstream out("old-customers.txt", ios::app); // open file using append mode to write customer details
@@ -58,9 +57,9 @@ public:
     }
     void showDetails() // function to show old customer records
     {
-        ifstream in("old-customers.txt");   //Reading from file
+        ifstream in("old-customers.txt"); // Reading from file
         {
-            if (!in)    //If file doesn't exist
+            if (!in) // If file doesn't exist
             {
                 cout << "File Error!" << endl;
                 Sleep(1100);
@@ -81,12 +80,12 @@ int Customer::cusID;
 
 class Cabs
 {
-public:
     int cabChoice;
     int kilometers;
     float cabCost;
     int gotoMenu;
 
+protected:
     static float lastCabCost;
 
     void cabDetails()
@@ -95,7 +94,6 @@ public:
         cout << "-----------ABC Cabs-----------\n"<< endl;
         cout << "1. Rent a Standard Cab - Rs.15 for 1KM" << endl;
         cout << "2. Rent a Luxury Cab - Rs.25 per 1KM" << endl;
-
         cout << "\nPress any key except 1 and 2 if you don't want to hire cab or,";
         cout << "\nTo calculate the cost for your journey enter which kind of cab you need: " << endl;
         cin >> cabChoice;
@@ -183,12 +181,12 @@ float Cabs::lastCabCost;
 
 class Booking
 {
-public:
     int choiceHotel;
     int packChoice1;
     int gotoMenu;
-    static float hotelCost;
 
+protected:
+    static float hotelCost;
     void hotels()
     {
         string hotelNo[] = {"Avendra", "ChoiceYou", "ElephantBay"};
@@ -199,7 +197,6 @@ public:
         }
 
         cout << "\nCurrently we collaborated with above hotels!" << endl;
-
         cout << "Press any key for back or,\nEnter Number of the hotel you want to book or see details: ";
         cin >> choiceHotel;
 
@@ -207,20 +204,15 @@ public:
 
         if (choiceHotel == 1)
         {
-            cout << "-------WELCOME TO HOTEL AVENDRA-------\n"
-                 << endl;
-
+            cout << "-------WELCOME TO HOTEL AVENDRA-------\n"<< endl;
             cout << "The Garden, food and beverage. Enjoy all you can drink, Stay cool and get chilled in the summer sun." << endl;
-
             cout << "Packages offered by Avendra:\n"<< endl;
-
             cout << "1. Standard Pack" << endl;
             cout << "\tAll basic facilities you need just for: Rs.5000.00" << endl;
             cout << "2. Premium Pack" << endl;
             cout << "\tEnjoy Premium: Rs.10000.00" << endl;
             cout << "3. Luxury Pack" << endl;
             cout << "\tLive a Luxury at Avendra: Rs.15000.00" << endl;
-
             cout << "\nPress another key for back or,\nEnter Package number you want to book: ";
             cin >> packChoice1;
 
@@ -264,13 +256,9 @@ public:
         }
         else if (choiceHotel == 2)
         {
-            cout << "-------WELCOME TO HOTEL CHOICEYOU-------\n"
-                 << endl;
-
+            cout << "-------WELCOME TO HOTEL CHOICEYOU-------\n"<< endl;
             cout << "Swimming Pool | Free WiFi | Family Rooms \n Fitness Center | Restaurant & Bar" << endl;
-
             cout << "Packages Offered by ChoiceYou:\n"<< endl;
-
             cout << "1. Family Pack" << endl;
             cout << "\t Rs.15000.00 for a day" << endl;
             cout << "2. Couple Pack" << endl;
@@ -324,7 +312,6 @@ public:
             cout << "-------WELCOME TO HOTEL ELEPHANTBAY-------\n"<< endl;
             cout << "Set in tropical gardens on the banks of the Maha Oya river While Seeing Elephants" << endl;
             cout << "Amazing offer in this summer: Rs.5000.00 for a one day!!!" << endl;
-
             cout << "\nPress another key for back or,\nPress 1 to book this special package: ";
             cin >> packChoice1;
 
@@ -409,6 +396,23 @@ public:
         }
         inf.close();
     }
+
+    void getDetailsfunc()
+    {
+        Customer::getDetails();
+    }
+    void showDetailsfunc()
+    {
+        Customer::showDetails();
+    }
+    void cabDetailsfunc()
+    {
+        Cabs::cabDetails();
+    }
+    void hotelsfunc()
+    {
+        Booking::hotels();
+    }
 };
 
 void menu() // menu function contain main menu
@@ -418,7 +422,7 @@ void menu() // menu function contain main menu
     int mainChoice;
     int inChoice;
     int gotoMenu;
-    cout << "\t\t      * Triple A Travels *\n" << endl;
+    cout << "\t\t      * Triple A Travels *\n"<< endl;
     cout << "-------------------------Main Menu--------------------------" << endl;
 
     cout << "\t _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " << endl;
@@ -436,17 +440,12 @@ void menu() // menu function contain main menu
 
     system("CLS");
 
-    // creating objects
-    Customer a2;
-    Cabs a3;
-    Booking a4;
-    charges a5;
+    charges obj;
 
     if (mainChoice == 1)
     {
         system("color 0B");
-        cout << "------Customers------\n"
-             << endl;
+        cout << "------Customers------\n"<< endl;
         cout << "1. Enter New Customer" << endl;
         cout << "2. See Old Customers" << endl;
 
@@ -456,11 +455,11 @@ void menu() // menu function contain main menu
         system("CLS");
         if (inChoice == 1)
         {
-            a2.getDetails();
+            obj.getDetailsfunc();
         }
         else if (inChoice == 2)
         {
-            a2.showDetails();
+            obj.showDetailsfunc();
         }
         else
         {
@@ -484,27 +483,25 @@ void menu() // menu function contain main menu
     else if (mainChoice == 2)
     {
         system("color 0C");
-        a3.cabDetails();
+        obj.cabDetailsfunc();
     }
     else if (mainChoice == 3)
     {
         system("color 06");
-        a4.hotels();
+        obj.hotelsfunc();
     }
     else if (mainChoice == 4)
     {
         system("color 0D");
-        cout << "-->Get your receipt<--\n"
-             << endl;
-        a5.printBill();
-        cout << "Your receipt is already printed you can get it from file path\n"
-             << endl;
+        cout << "-->Get your receipt<--\n"<< endl;
+        obj.printBill();
+        cout << "Your receipt is already printed you can get it from file path\n"<< endl;
         cout << "To display your receipt here Enter 1, or Enter other key to goto main menu: ";
         cin >> gotoMenu;
         if (gotoMenu == 1)
         {
             system("CLS");
-            a5.showDetails(); // Run-time Polymorphism applied as this function is also there in Customer Class (Parent Class).
+            obj.showDetails(); // Run-time Polymorphism applied as this function is also there in Customer Class (Parent Class).
             cout << "Press 1 to Redirect to Main Menu: ";
             cin >> gotoMenu;
             system("CLS");
@@ -540,7 +537,7 @@ void menu() // menu function contain main menu
 }
 
 int main()
-{ 
+{
     ManageMenu startObj;
     return 0;
 }
