@@ -3,7 +3,6 @@
 #include <fstream>
 #include <windows.h>
 using namespace std;
-
 void menu(); // main menu function prototype
 
 class ManageMenu
@@ -20,7 +19,6 @@ public:
         system("CLS"); // Clear output screen
         menu();        // call to main function to load after executing the constructor
     }
-
     ~ManageMenu() {} // Destructor (Deletes the Object)
 };
 
@@ -53,7 +51,8 @@ protected:
         }
         out << "\nCustomer ID: " << cusID << "\nName: " << name << "\nAge: " << age << "\nMobile Number: " << mobileNo << "\nAddress: " << address << "\nGender: " << gender << endl;
         out.close();
-        cout << "\nSaved\nNOTE: We save your details record for future purposes.\n"<< endl;
+        cout << "\nSaved\nNOTE: We save your details record for future purposes.\n"
+             << endl;
     }
     void showDetails() // function to show old customer records
     {
@@ -87,11 +86,11 @@ class Cabs
 
 protected:
     static float lastCabCost;
-
     void cabDetails()
     {
         cout << "We collaborated with fastest, safest, and smartest cab service arround the country" << endl;
-        cout << "-----------ABC Cabs-----------\n"<< endl;
+        cout << "-----------ABC Cabs-----------\n"
+             << endl;
         cout << "1. Rent a Standard Cab - Rs.15 for 1KM" << endl;
         cout << "2. Rent a Luxury Cab - Rs.25 per 1KM" << endl;
         cout << "\nPress any key except 1 and 2 if you don't want to hire cab or,";
@@ -190,7 +189,8 @@ protected:
     void hotels()
     {
         string hotelNo[] = {"Avendra", "ChoiceYou", "ElephantBay"};
-        cout << "--> Book a Luxury Hotel using the System <--\n"<< endl;
+        cout << "--> Book a Luxury Hotel using the System <--\n"
+             << endl;
         for (int a = 0; a < 3; a++)
         {
             cout << (a + 1) << ". Hotel " << hotelNo[a] << endl;
@@ -204,9 +204,11 @@ protected:
 
         if (choiceHotel == 1)
         {
-            cout << "-------WELCOME TO HOTEL AVENDRA-------\n"<< endl;
+            cout << "-------WELCOME TO HOTEL AVENDRA-------\n"
+                 << endl;
             cout << "The Garden, food and beverage. Enjoy all you can drink, Stay cool and get chilled in the summer sun." << endl;
-            cout << "Packages offered by Avendra:\n"<< endl;
+            cout << "Packages offered by Avendra:\n"
+                 << endl;
             cout << "1. Standard Pack" << endl;
             cout << "\tAll basic facilities you need just for: Rs.5000.00" << endl;
             cout << "2. Premium Pack" << endl;
@@ -265,7 +267,6 @@ protected:
             cout << "\t Rs.10000.00 for a day" << endl;
             cout << "3. Single Pack" << endl;
             cout << "\t 5000.00 for a day" << endl;
-
             cout << "\nPress another key for back or,\nEnter Package number you want to book: ";
             cin >> packChoice1;
 
@@ -309,7 +310,8 @@ protected:
         }
         else if (choiceHotel == 3)
         {
-            cout << "-------WELCOME TO HOTEL ELEPHANTBAY-------\n"<< endl;
+            cout << "-------WELCOME TO HOTEL ELEPHANTBAY-------\n"
+                 << endl;
             cout << "Set in tropical gardens on the banks of the Maha Oya river While Seeing Elephants" << endl;
             cout << "Amazing offer in this summer: Rs.5000.00 for a one day!!!" << endl;
             cout << "\nPress another key for back or,\nPress 1 to book this special package: ";
@@ -364,7 +366,8 @@ public:
             outf << "-------------Receipt-------------" << endl;
             outf << "_________________________________" << endl;
 
-            outf << "Customer ID: " << Customer::cusID << endl<< endl;
+            outf << "Customer ID: " << Customer::cusID << endl
+                 << endl;
             outf << "Description\t\t Total" << endl;
             outf << "Hotel cost:\t\t " << fixed << setprecision(2) << Booking::hotelCost << endl; // Using Manipulators
             outf << "Travel (cab) cost:\t " << fixed << setprecision(2) << Cabs::lastCabCost << endl;
@@ -396,22 +399,11 @@ public:
         }
         inf.close();
     }
+    friend void menu();
 
-    void getDetailsfunc()
-    {
-        Customer::getDetails();
-    }
     void showDetailsfunc()
     {
         Customer::showDetails();
-    }
-    void cabDetailsfunc()
-    {
-        Cabs::cabDetails();
-    }
-    void hotelsfunc()
-    {
-        Booking::hotels();
     }
 };
 
@@ -422,7 +414,8 @@ void menu() // menu function contain main menu
     int mainChoice;
     int inChoice;
     int gotoMenu;
-    cout << "\t\t      * Triple A Travels *\n"<< endl;
+    cout << "\t\t      * Triple A Travels *\n"
+         << endl;
     cout << "-------------------------Main Menu--------------------------" << endl;
 
     cout << "\t _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " << endl;
@@ -445,7 +438,8 @@ void menu() // menu function contain main menu
     if (mainChoice == 1)
     {
         system("color 0B");
-        cout << "------Customers------\n"<< endl;
+        cout << "------Customers------\n"
+             << endl;
         cout << "1. Enter New Customer" << endl;
         cout << "2. See Old Customers" << endl;
 
@@ -455,7 +449,7 @@ void menu() // menu function contain main menu
         system("CLS");
         if (inChoice == 1)
         {
-            obj.getDetailsfunc();
+            obj.getDetails();
         }
         else if (inChoice == 2)
         {
@@ -483,12 +477,12 @@ void menu() // menu function contain main menu
     else if (mainChoice == 2)
     {
         system("color 0C");
-        obj.cabDetailsfunc();
+        obj.cabDetails();
     }
     else if (mainChoice == 3)
     {
         system("color 06");
-        obj.hotelsfunc();
+        obj.hotels();
     }
     else if (mainChoice == 4)
     {
