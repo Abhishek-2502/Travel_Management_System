@@ -51,8 +51,7 @@ protected:
         }
         out << "\nCustomer ID: " << cusID << "\nName: " << name << "\nAge: " << age << "\nMobile Number: " << mobileNo << "\nAddress: " << address << "\nGender: " << gender << endl;
         out.close();
-        cout << "\nSaved\nNOTE: We save your details record for future purposes.\n"
-             << endl;
+        cout << "\nSaved\nNOTE: We save your details record for future purposes.\n"<< endl;
     }
     void showDetails() // function to show old customer records
     {
@@ -82,15 +81,13 @@ class Cabs
     int cabChoice;
     int kilometers;
     float cabCost;
-    int gotoMenu;
 
 protected:
     static float lastCabCost;
     void cabDetails()
     {
         cout << "We collaborated with fastest, safest, and smartest cab service arround the country" << endl;
-        cout << "-----------ABC Cabs-----------\n"
-             << endl;
+        cout << "-----------ABC Cabs-----------\n"<< endl;
         cout << "1. Rent a Standard Cab - Rs.15 for 1KM" << endl;
         cout << "2. Rent a Luxury Cab - Rs.25 per 1KM" << endl;
         cout << "\nPress any key except 1 and 2 if you don't want to hire cab or,";
@@ -111,8 +108,7 @@ protected:
             if (hireCab == 1)
             {
                 lastCabCost = cabCost;
-                cout << "\nYou have successfully hired standard cab" << endl;
-                cout << "Goto Main Menu to take the receipt" << endl;
+                cout << "\nYou have successfully hired standard cab\n"<< endl;
             }
             else if (hireCab == 2)
             {
@@ -138,8 +134,7 @@ protected:
             if (hireCab == 1)
             {
                 lastCabCost = cabCost;
-                cout << "\nYou have successfully hired luxury cab" << endl;
-                cout << "Goto Main Menu to take the receipt" << endl;
+                cout << "\nYou have successfully hired luxury cab\n"<< endl;
             }
             else if (hireCab == 2)
             {
@@ -161,18 +156,9 @@ protected:
             system("CLS");
             menu();
         }
-
-        cout << "\nPress 1 to Redirect to Main Menu: ";
-        cin >> gotoMenu;
+        system("pause");
         system("CLS");
-        if (gotoMenu == 1)
-        {
-            menu();
-        }
-        else
-        {
-            menu();
-        }
+        menu();
     }
 };
 
@@ -182,15 +168,13 @@ class Booking
 {
     int choiceHotel;
     int packChoice1;
-    int gotoMenu;
 
 protected:
     static float hotelCost;
     void hotels()
     {
         string hotelNo[] = {"Avendra", "ChoiceYou", "ElephantBay"};
-        cout << "--> Book a Luxury Hotel using the System <--\n"
-             << endl;
+        cout << "--> Book a Luxury Hotel using the System <--\n"<< endl;
         for (int a = 0; a < 3; a++)
         {
             cout << (a + 1) << ". Hotel " << hotelNo[a] << endl;
@@ -204,11 +188,9 @@ protected:
 
         if (choiceHotel == 1)
         {
-            cout << "-------WELCOME TO HOTEL AVENDRA-------\n"
-                 << endl;
+            cout << "-------WELCOME TO HOTEL AVENDRA-------\n"<< endl;
             cout << "The Garden, food and beverage. Enjoy all you can drink, Stay cool and get chilled in the summer sun." << endl;
-            cout << "Packages offered by Avendra:\n"
-                 << endl;
+            cout << "Packages offered by Avendra:\n"<< endl;
             cout << "1. Standard Pack" << endl;
             cout << "\tAll basic facilities you need just for: Rs.5000.00" << endl;
             cout << "2. Premium Pack" << endl;
@@ -221,20 +203,17 @@ protected:
             if (packChoice1 == 1)
             {
                 hotelCost = 5000.00;
-                cout << "\nYou have successfully booked Standard Pack at Avendra" << endl;
-                cout << "Goto Main Menu and take the receipt" << endl;
+                cout << "\nYou have successfully booked Standard Pack at Avendra\n"<< endl;
             }
             else if (packChoice1 == 2)
             {
                 hotelCost = 10000.00;
-                cout << "\nYou have successfully booked Premium Pack at Avendra" << endl;
-                cout << "Goto Main Menu and take the receipt" << endl;
+                cout << "\nYou have successfully booked Premium Pack at Avendra\n"<< endl;
             }
             else if (packChoice1 == 3)
             {
                 hotelCost = 15000.00;
-                cout << "\nYou have successfully booked Luxury Pack at Avendra" << endl;
-                cout << "Goto Main Menu to take the receipt" << endl;
+                cout << "\nYou have successfully booked Luxury Pack at Avendra\n"<< endl;
             }
             else
             {
@@ -243,18 +222,9 @@ protected:
                 system("CLS");
                 hotels();
             }
-
-            cout << "\nPress 1 to Redirect Main Menu: ";
-            cin >> gotoMenu;
+            system("pause");
             system("CLS");
-            if (gotoMenu == 1)
-            {
-                menu();
-            }
-            else
-            {
-                menu();
-            }
+            menu();
         }
         else if (choiceHotel == 2)
         {
@@ -273,20 +243,17 @@ protected:
             if (packChoice1 == 1)
             {
                 hotelCost = 15000.00;
-                cout << "You have successfully booked Family Pack at ChoiceYou" << endl;
-                cout << "Goto Main Menu and take the receipt" << endl;
+                cout << "You have successfully booked Family Pack at ChoiceYou\n"<< endl;
             }
             else if (packChoice1 == 2)
             {
                 hotelCost = 10000.00;
-                cout << "You have successfully booked Couple Pack at ChoiceYou" << endl;
-                cout << "Goto Main Menu and take the receipt" << endl;
+                cout << "You have successfully booked Couple Pack at ChoiceYou\n"<< endl;
             }
             else if (packChoice1 == 3)
             {
                 hotelCost = 5000.00;
-                cout << "You have successfully booked Single Pack at ChoiceYou" << endl;
-                cout << "Goto Main Menu and take the receipt" << endl;
+                cout << "You have successfully booked Single Pack at ChoiceYou\n"<< endl;
             }
             else
             {
@@ -295,23 +262,13 @@ protected:
                 system("CLS");
                 hotels();
             }
-
-            cout << "\nPress 1 to Redirect Main Menu: ";
-            cin >> gotoMenu;
+            system("pause");
             system("CLS");
-            if (gotoMenu == 1)
-            {
-                menu();
-            }
-            else
-            {
-                menu();
-            }
+            menu();
         }
         else if (choiceHotel == 3)
         {
-            cout << "-------WELCOME TO HOTEL ELEPHANTBAY-------\n"
-                 << endl;
+            cout << "-------WELCOME TO HOTEL ELEPHANTBAY-------\n"<< endl;
             cout << "Set in tropical gardens on the banks of the Maha Oya river While Seeing Elephants" << endl;
             cout << "Amazing offer in this summer: Rs.5000.00 for a one day!!!" << endl;
             cout << "\nPress another key for back or,\nPress 1 to book this special package: ";
@@ -320,27 +277,17 @@ protected:
             if (packChoice1 == 1)
             {
                 hotelCost = 5000.00;
-                cout << "You have successfully booked ElephantBay Special Pack" << endl;
-                cout << "Goto Main Menu and take the receipt" << endl;
+                cout << "You have successfully booked ElephantBay Special Pack\n"<< endl;
             }
             else
             {
-                cout << "Invalid Input! Redirecting to Previous Menu \nPlease Wait!" << endl;
                 Sleep(1100);
                 system("CLS");
                 hotels();
             }
-            cout << "\nPress 1 to Redirect to Main Menu: ";
-            cin >> gotoMenu;
+            system("pause");
             system("CLS");
-            if (gotoMenu == 1)
-            {
-                menu();
-            }
-            else
-            {
-                menu();
-            }
+            menu();
         }
         else
         {
@@ -366,8 +313,7 @@ public:
             outf << "-------------Receipt-------------" << endl;
             outf << "_________________________________" << endl;
 
-            outf << "Customer ID: " << Customer::cusID << endl
-                 << endl;
+            outf << "Customer ID: " << Customer::cusID << endl<< endl;
             outf << "Description\t\t Total" << endl;
             outf << "Hotel cost:\t\t " << fixed << setprecision(2) << Booking::hotelCost << endl; // Using Manipulators
             outf << "Travel (cab) cost:\t " << fixed << setprecision(2) << Cabs::lastCabCost << endl;
@@ -414,8 +360,7 @@ void menu() // menu function contain main menu
     int mainChoice;
     int inChoice;
     int gotoMenu;
-    cout << "\t\t      * Triple A Travels *\n"
-         << endl;
+    cout << "\t\t      * Triple A Travels *\n"<< endl;
     cout << "-------------------------Main Menu--------------------------" << endl;
 
     cout << "\t _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " << endl;
@@ -438,11 +383,9 @@ void menu() // menu function contain main menu
     if (mainChoice == 1)
     {
         system("color 0B");
-        cout << "------Customers------\n"
-             << endl;
+        cout << "------Customers------\n"<< endl;
         cout << "1. Enter New Customer" << endl;
         cout << "2. See Old Customers" << endl;
-
         cout << "\nEnter choice: ";
         cin >> inChoice;
 
@@ -462,17 +405,9 @@ void menu() // menu function contain main menu
             system("CLS");
             menu();
         }
-        cout << "Press 1 to Redirect to Main Menu: ";
-        cin >> gotoMenu;
+        system("pause");
         system("CLS");
-        if (gotoMenu == 1)
-        {
-            menu();
-        }
-        else
-        {
-            menu();
-        }
+        menu();
     }
     else if (mainChoice == 2)
     {
@@ -496,17 +431,9 @@ void menu() // menu function contain main menu
         {
             system("CLS");
             obj.showDetails(); // Run-time Polymorphism applied as this function is also there in Customer Class (Parent Class).
-            cout << "Press 1 to Redirect to Main Menu: ";
-            cin >> gotoMenu;
+            system("pause");
             system("CLS");
-            if (gotoMenu == 1)
-            {
-                menu();
-            }
-            else
-            {
-                menu();
-            }
+            menu();
         }
         else
         {
