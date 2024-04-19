@@ -1,19 +1,19 @@
 # Travel Mangement System
 
-## INTRODUCTION
+## Introduction
 
 <p>The Triple A Travel Agency Management System is a console-based application
 designed to manage customer data, cab bookings, and hotel reservations. The system
 provides a comprehensive suite of functions, including capturing customer details,
 calculating cab costs based on user preferences, and facilitating hotel bookings.</p>
 
-## PROBLEM STATEMENT
+## Problem Statement
 
 <p>Travel agencies require efficient management systems to handle customer data, cab
 bookings, and hotel reservations. The lack of such systems can lead to operational
 inefficiencies, errors in booking calculations, and inadequate customer service.</p>
 
-## EXPLANATION
+## Explanation
 The provided code is implemented in C++ and consists of several classes:
 
 - `ManageMenu`: Manages the main menu display and administrative access.
@@ -58,10 +58,10 @@ billing process, combining all charges and generating a detailed bill.</p>
 various features, such as customer management, cab reservations, hotel bookings, and
 billing.</p>
 
-## CLASS DIAGRAM
+## Class Diagram
 <img src="https://github.com/Abhishek-2502/Travel_Mangement/assets/145414094/2ff5f926-3e03-437c-9ff7-6b3829ac3f84" alt="error">
 
-## CODE HIGHLIGHTS
+## Code Highlights
 
 1. File Operations: Utilizing C++'s `ofstream` and `ifstream`, the system can persistently
 store and retrieve data, ensuring longevity and access to customer records and receipts.
